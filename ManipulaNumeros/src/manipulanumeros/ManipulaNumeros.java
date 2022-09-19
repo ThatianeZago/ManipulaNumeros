@@ -12,6 +12,7 @@ public static int x,y;
     do{
       System.out.println("Menu de Operações com número: ");
       System.out.println(" 1 - Maior de 2 números");
+      System.out.println(" 2 - Ordenar valor decrescente");
       
       System.out.println(" 0 - Para sair");
       System.out.println("Seleione a opção pretendida: ");
@@ -21,7 +22,13 @@ public static int x,y;
           case 1:
               leValores("Insira um valor: ","Insira outro valor: ");
               MaiorNumero.maior2(x,y);
-              break;
+          break;
+          case 2:do{
+              le1Valor("Insira um valor: ");
+          }while(x<=0); 
+                NumeroDecrescente.ordenaDecrescente(x);
+                
+                break;
           default: System.out.println("Insira a opção válida.");
       }
     }while(op!=0);
@@ -33,5 +40,10 @@ public static int x,y;
          System.out.println(s2);
          y = ler.nextInt();
     }
+
+    private static void le1Valor(String s1) {
+         System.out.println(s1);
+         x = ler.nextInt();
+   }
     
 }
