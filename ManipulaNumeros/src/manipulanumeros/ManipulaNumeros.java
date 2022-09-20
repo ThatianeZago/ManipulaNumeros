@@ -13,6 +13,9 @@ public static int x,y;
       System.out.println("Menu de Operações com número: ");
       System.out.println(" 1 - Maior de 2 números");
       System.out.println(" 2 - Ordenar valor decrescente");
+      System.out.println(" 3 - Soma ímpares multiplica pares");
+      System.out.println(" 4 - Troca de valores entre variáveis");
+
       
       System.out.println(" 0 - Para sair");
       System.out.println("Seleione a opção pretendida: ");
@@ -22,13 +25,16 @@ public static int x,y;
           case 1:
               leValores("Insira um valor: ","Insira outro valor: ");
               MaiorNumero.maior2(x,y);
-          break;
+            break;
           case 2:do{
               le1Valor("Insira um valor: ");
           }while(x<=0); 
                 NumeroDecrescente.ordenaDecrescente(x);
-                
-                break;
+             break;
+           case 3: somaImparesMultiplicaPares(); break;
+           case 4: leValores("Insira um valor: ","Insira outro valor: "); 
+           TrocaNumero.trocaValoresEntreVariaveis(x,y);
+           break;
           default: System.out.println("Insira a opção válida.");
       }
     }while(op!=0);
@@ -45,5 +51,29 @@ public static int x,y;
          System.out.println(s1);
          x = ler.nextInt();
    }
-    
+
+    private static void somaImparesMultiplicaPares() {
+        int i = 0;
+        long par = 0;
+        int impar = 0;
+        
+                
+        for ( i = 0; i < 30; i++ ){
+            if (i%2 == 0){
+                if (i>2){
+                par = par*i;
+                }
+            else{
+            par = i;
+            }
+        }
+        
+        else{
+            impar = impar+i;
+                }
+        
+        }
+        System.out.println("O valor da soma dos números impares é "+impar);
+        System.out.println("A multiplicação dos valores pares é "+ par);
+        } 
 }
