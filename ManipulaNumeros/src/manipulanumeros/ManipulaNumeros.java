@@ -17,6 +17,7 @@ public static int x,y;
       System.out.println(" 4 - Troca de valores entre variáveis");
       System.out.println(" 5 - Comparar números");
       System.out.println(" 6 - Calcular média de aluno");
+      System.out.println(" 7 - Calcular custo do carro");
 
       
       System.out.println(" 0 - Para sair");
@@ -33,16 +34,24 @@ public static int x,y;
           }while(x<=0); 
                 NumeroDecrescente.ordenaDecrescente(x);
              break;
-           case 3: somaImparesMultiplicaPares(); break;
-           case 4: leValores("Insira um valor: ","Insira outro valor: "); 
-           TrocaNumero.trocaValoresEntreVariaveis(x,y);
+           case 3:
+               somaImparesMultiplicaPares(); 
+               break;
+           case 4: 
+               leValores("Insira um valor: ","Insira outro valor: "); 
+               TrocaNumero.trocaValoresEntreVariaveis(x,y);
            break;
-           case 5: leValores("Insira um valor: ","Insira outro valor: "); 
-           CompararNumero.Comparar2Valores(x,y);
+           case 5: 
+               leValores("Insira um valor: ","Insira outro valor: "); 
+               CompararNumero.Comparar2Valores(x,y);
            break;
-           case 6: leValores("Insira um valor: ","Insira outro valor: "); 
-            MediaALuno.registraNotas();
+           case 6: 
+               leValores("Insira um valor: ","Insira outro valor: "); 
+               MediaALuno.registraNotas();
             break;
+            case 7:
+             Carro.calculaValorFinal();
+                break;
           default: System.out.println("Insira a opção válida.");
       }
     }while(op!=0);
