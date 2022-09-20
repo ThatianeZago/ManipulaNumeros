@@ -15,6 +15,7 @@ public static int x,y;
       System.out.println(" 2 - Ordenar valor decrescente");
       System.out.println(" 3 - Soma ímpares multiplica pares");
       System.out.println(" 4 - Troca de valores entre variáveis");
+      System.out.println(" 5 - Comparar números");
 
       
       System.out.println(" 0 - Para sair");
@@ -34,6 +35,8 @@ public static int x,y;
            case 3: somaImparesMultiplicaPares(); break;
            case 4: leValores("Insira um valor: ","Insira outro valor: "); 
            TrocaNumero.trocaValoresEntreVariaveis(x,y);
+           case 5: leValores("Insira um valor: ","Insira outro valor: "); 
+           CompararNumero.Comparar2Valores(x,y);
            break;
           default: System.out.println("Insira a opção válida.");
       }
